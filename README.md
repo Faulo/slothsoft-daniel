@@ -1,4 +1,4 @@
-Files and Resources and Hypertext
-=================================
+daniel-schulz.slothsoft.net
+===========================
 
-A Farah module.
+A Farah module that contains the content of daniel-schulz.slothsoft.net
