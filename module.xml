@@ -1,40 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module>
-	<fragment name="default">
-		<struc name="default" />
-	</fragment>
+<?xml version="1.0"?>
+<module xmlns="http://schema.slothsoft.net/farah/module" xmlns:sfm="http://schema.slothsoft.net/farah/module">
+  <!--
+Farah Module Manifest
 
-	<fragment name="tetris">
-		<struc name="default" />
-		<call name="/tetris/game" as="content" />
-	</fragment>
+Module: daniel
+Vendor: slothsoft
+Farah ID: farah://slothsoft@daniel
+Composer ID: slothsoft/daniel
 
-	<fragment name="navi">
-		<template name="navi" />
-		<res name="/core/sites" load="xml" />
-	</fragment>
+Homepage: http://farah.slothsoft.net/modules/daniel
+Packagist: https://packagist.org/packages/slothsoft/daniel
+GitHub: https://github.com/Faulo/slothsoft-daniel
 
-	<fragment name="images">
-		<template name="imageList" />
-		<resDir name="images" load="status" />
-	</fragment>
-
-	<struc name="default">
-		<template name="_default" />
-		<res name="/core/sites" load="xml" />
-		<style name="layout" />
-		<call name="navi" />
-		<style name="/slothsoft/fonts" />
-		<style name="/slothsoft/default" />
-	</struc>
-
-	<resourceDir name="images" path="images" type="image/png" />
-
-	<resource name="sites" path="sites.xml" type="application/xml" />
-
-	<resource name="favicon" path="favicon.png" type="image/png" />
-	<resourceDir name="misc" path="misc" type="*/*" />
-
-	<resource name="contacts" path="google.csv" type="text/csv"
-		del="," sep="" output="thead" min-length="1" />
+Llo
+-->
+  <default-configuration/>
+  <assets>
+    <resource-directory name="data" path="data" type="application/x-php"/>
+    <resource-directory name="css" path="stylesheet" type="text/css"/>
+    <resource-directory name="js" path="script" type="application/javascript"/>
+    <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
+    <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
+    <resource-directory name="pages" path="pages" type="application/xml"/>
+    <fragment name="default">
+      <include-fragment ref="default"/>
+    </fragment>
+    <fragment name="tetris">
+      <include-fragment ref="default"/>
+      <use-document as="content" ref="//slothsoft@tetris/game"/>
+    </fragment>
+    <fragment name="navi">
+      <use-template ref="xsl/navi"/>
+      <use-document ref="//slothsoft@core/static/sites"/>
+    </fragment>
+    <fragment name="images">
+      <use-template ref="xsl/imageList"/>
+      <use-document ref="static/images"/>
+    </fragment>
+    <fragment name="default">
+      <use-template ref="xsl/_default"/>
+      <use-document ref="//slothsoft@core/static/sites"/>
+      <use-stylesheet ref="css/layout"/>
+      <use-document ref="navi"/>
+      <use-stylesheet ref="//slothsoft@slothsoft/css/fonts"/>
+      <use-stylesheet ref="//slothsoft@slothsoft/css/default"/>
+    </fragment>
+    <directory name="static">
+      <resource-directory name="images" path="images" type="image/png"/>
+      <resource name="sites" path="sites.xml" type="application/xml"/>
+      <resource name="favicon" path="favicon.png" type="image/png"/>
+      <resource-directory name="misc" path="misc" type="*/*"/>
+      <resource name="contacts" path="google.csv" type="text/csv">
+        <options del="," sep="" output="thead" min-length="1"/>
+      </resource>
+    </directory>
+  </assets>
 </module>
