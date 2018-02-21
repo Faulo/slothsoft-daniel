@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data>
+<pages xmlns="http://schema.slothsoft.net/farah/sites"
+xmlns:sfm="http://schema.slothsoft.net/farah/module">
 	<page name="AboutMe" title="AboutMe" ref="default" status-active="" status-public=""/>
 	<page name="Projects" title="Projects" ref="default" status-active="" status-public="">
 		<page name="Ambermoon" title="Ambermoon" ref="default" status-active="" status-public=""/>
@@ -34,4 +35,4 @@
 	<page name="Resume" title="Resume" ref="index" status-active="" status-public=""/>
 	<page name="Contact" title="Contact" ref="index" status-active="" status-public=""/>
 	-->
-</data>
+</pages>

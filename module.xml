@@ -22,6 +22,14 @@ Llo
     <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
     <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
     <resource-directory name="pages" path="pages" type="application/xml"/>
+    <directory name="static">
+      <resource-directory name="images" path="images" type="image/png"/>
+      <resource name="favicon" path="favicon.png" type="image/png"/>
+      <resource-directory name="misc" path="misc" type="*/*"/>
+      <resource name="contacts" path="google.csv" type="text/csv">
+        <options del="," sep="" output="thead" min-length="1"/>
+      </resource>
+    </directory>
     <fragment name="default">
       <include-fragment ref="default"/>
     </fragment>
@@ -45,14 +53,5 @@ Llo
       <use-stylesheet ref="//slothsoft@slothsoft/css/fonts"/>
       <use-stylesheet ref="//slothsoft@slothsoft/css/default"/>
     </fragment>
-    <directory name="static">
-      <resource-directory name="images" path="images" type="image/png"/>
-      <resource name="sites" path="sites.xml" type="application/xml"/>
-      <resource name="favicon" path="favicon.png" type="image/png"/>
-      <resource-directory name="misc" path="misc" type="*/*"/>
-      <resource name="contacts" path="google.csv" type="text/csv">
-        <options del="," sep="" output="thead" min-length="1"/>
-      </resource>
-    </directory>
   </assets>
 </module>
