@@ -31,10 +31,10 @@ Llo
       </resource>
     </directory>
     <fragment name="default">
-      <include-fragment ref="default"/>
+      <import ref="default"/>
     </fragment>
     <fragment name="tetris">
-      <include-fragment ref="default"/>
+      <import ref="default"/>
       <use-document as="content" ref="//slothsoft@tetris/game"/>
     </fragment>
     <fragment name="navi">
