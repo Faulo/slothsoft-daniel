@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Slothsoft\\Daniel\\": "src\/Slothsoft\/Daniel\/"
+            "Slothsoft\\Daniel\\": "src\/"
         }
     }
 }
