@@ -16,6 +16,7 @@
         "slothsoft\/farah": "*",
         "slothsoft\/lang": "*",
         "slothsoft\/pt": "*",
+        "slothsoft\/tetris": "*",
         "slothsoft\/w3c": "*"
     },
     "require-dev": {
@@ -25,6 +26,7 @@
         "slothsoft\/farah": "dev-master",
         "slothsoft\/lang": "dev-master",
         "slothsoft\/pt": "dev-master",
+        "slothsoft\/tetris": "dev-master",
         "slothsoft\/w3c": "dev-master"
     },
     "autoload": {

@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
-    <resource-directory name="data" path="data" type="application/x-php"/>
     <resource-directory name="css" path="stylesheet" type="text/css"/>
-    <resource-directory name="js" path="script" type="application/javascript"/>
     <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
     <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
     <resource-directory name="pages" path="pages" type="application/xml"/>
@@ -23,7 +21,7 @@
     </fragment>
     <fragment name="navi">
       <use-template ref="xsl/navi"/>
-      <use-document ref="//slothsoft@core/static/sites"/>
+      <use-document ref="//slothsoft@farah/sites"/>
     </fragment>
     <fragment name="images">
       <use-template ref="xsl/imageList"/>
@@ -31,10 +29,10 @@
     </fragment>
     <fragment name="default">
       <use-template ref="xsl/_default"/>
-      <use-document ref="//slothsoft@core/static/sites"/>
+      <use-document ref="//slothsoft@farah/sites"/>
       <link-stylesheet ref="css/layout"/>
       <use-document ref="navi"/>
-      <link-stylesheet ref="//slothsoft@slothsoft/css/fonts"/>
-      <link-stylesheet ref="//slothsoft@slothsoft/css/default"/>
+<!--       <link-stylesheet ref="//slothsoft@slothsoft/css/fonts"/> -->
+<!--       <link-stylesheet ref="//slothsoft@slothsoft/css/default"/> -->
     </fragment>
   </assets>
