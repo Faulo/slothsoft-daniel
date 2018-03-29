@@ -1,38 +1,42 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
-    <resource-directory name="css" path="stylesheet" type="text/css"/>
-    <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
-    <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
-    <resource-directory name="pages" path="pages" type="application/xml"/>
+    <resource-directory name="css" type="text/css"/>
+    <resource-directory name="xsl" type="application/xslt+xml"/>
+    
+    <resource-directory name="dictionary" type="application/xml"/>
+    <resource-directory name="sitemap" type="application/xml"/>
+    
     <directory name="static">
       <resource-directory name="images" path="images" type="image/png"/>
-      <resource name="favicon" path="favicon.png" type="image/png"/>
       <resource-directory name="misc" path="misc" type="*/*"/>
-      <resource name="contacts" path="google.csv" type="text/csv">
-        <options del="," sep="" output="thead" min-length="1"/>
-      </resource>
+      
+      <resource name="favicon" path="favicon.png" type="image/png"/>
     </directory>
-    <fragment name="default">
-      <import ref="default"/>
+    
+    <fragment name="pages">
+    	<fragment name="default">
+	      <import ref="imports/default"/>
+	    </fragment>
+	    <fragment name="tetris">
+	      <import ref="imports/default"/>
+	      <use-document ref="//slothsoft@tetris/game" as="content"/>
+	    </fragment>
     </fragment>
-    <fragment name="tetris">
-      <import ref="default"/>
-      <use-document as="content" ref="//slothsoft@tetris/game"/>
-    </fragment>
-    <fragment name="navi">
-      <use-template ref="xsl/navi"/>
-      <use-document ref="//slothsoft@farah/sites"/>
-    </fragment>
-    <fragment name="images">
-      <use-template ref="xsl/imageList"/>
-      <use-document ref="static/images"/>
-    </fragment>
-    <fragment name="default">
-      <use-template ref="xsl/_default"/>
-      <use-document ref="//slothsoft@farah/sites"/>
-      <link-stylesheet ref="css/layout"/>
-      <use-document ref="navi"/>
-<!--       <link-stylesheet ref="//slothsoft@slothsoft/css/fonts"/> -->
-<!--       <link-stylesheet ref="//slothsoft@slothsoft/css/default"/> -->
+    
+    <fragment name="imports">
+	    <fragment name="default">
+	      <use-template ref="xsl/_default"/>
+	      <use-document ref="//slothsoft@farah/sites"/>
+	      <link-stylesheet ref="css/layout"/>
+	      <use-document ref="imports/navi"/>
+	    </fragment>
+	    <fragment name="navi">
+	      <use-template ref="xsl/navi"/>
+	      <use-document ref="//slothsoft@farah/sites"/>
+	    </fragment>
+	    <fragment name="images">
+	      <use-template ref="xsl/imageList"/>
+	      <use-document ref="static/images"/>
+	    </fragment>
     </fragment>
   </assets>
