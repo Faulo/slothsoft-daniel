@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pages xmlns="http://schema.slothsoft.net/farah/sites"
+<sitemap version="1.0" xmlns="http://schema.slothsoft.net/farah/sitemap"
 xmlns:sfm="http://schema.slothsoft.net/farah/module">
 	<page name="AboutMe" title="AboutMe" ref="default" status-active="" status-public=""/>
 	<page name="Projects" title="Projects" ref="default" status-active="" status-public="">
@@ -35,4 +35,4 @@ xmlns:sfm="http://schema.slothsoft.net/farah/module">
 	<page name="Resume" title="Resume" ref="index" status-active="" status-public=""/>
 	<page name="Contact" title="Contact" ref="index" status-active="" status-public=""/>
 	-->
-</pages>
+</sitemap>
