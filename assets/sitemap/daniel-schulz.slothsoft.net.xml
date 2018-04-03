@@ -17,4 +17,5 @@
 		<page name="Tetris" title="Tetris" ref="pages/tetris" status-active=""/>
 		<page name="Unicode" title="Unicode" ref="pages/default" status-active=""/>
 	</page>
+	<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active=""/>
 </domain>
