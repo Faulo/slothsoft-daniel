@@ -6,10 +6,10 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
  
 	<xsl:output method="xml" indent="no" encoding="UTF-8" media-type="application/xhtml+xml" version="1.0"/>
-	<xsl:template match="/data">
+	<xsl:template match="/*">
 		<xsl:variable name="pageTitles" select="request/*"/>
-		<xsl:variable name="pageHeadings" select="*[@data-cms-name='content']//html:h2[@id]"/>
-		<xsl:variable name="chatNode" select="*[@data-cms-name='chat']"/>
+		<xsl:variable name="pageHeadings" select="*[@name='content']//html:h2[@id]"/>
+		<xsl:variable name="chatNode" select="*[@name='chat']"/>
 		<xsl:variable name="requestedPage" select="request/*[1]"/>
 		<html>
 			<head>
@@ -52,7 +52,7 @@
 							<svg:text x="0.5em" y="0.5em">Daniel Schulz</svg:text>
 						</svg:svg>
 						-->
-						<xsl:copy-of select="*[@data-cms-name='navi']/node()"/>
+						<xsl:copy-of select="*[@name='navi']/node()"/>
 					</nav>
 					<main>
 						<!--
@@ -67,7 +67,7 @@
 							<xsl:value-of select="$pageTitles[1]/@name"/>
 							<xsl:text>/content</xsl:text>
 						</div>
-						<xsl:copy-of select="*[@data-cms-name='content']/node()"/>
+						<xsl:copy-of select="*[@name='content']/node()"/>
 					</main>
 				</div>
 			</body>
