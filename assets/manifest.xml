@@ -8,7 +8,6 @@
     
     <directory name="static">
       <resource-directory name="images" path="images" type="image/png"/>
-      <resource-directory name="misc" path="misc" type="*/*"/>
       
       <resource name="favicon" path="favicon.png" type="image/png"/>
     </directory>
@@ -28,6 +27,7 @@
 	      <use-template ref="xsl/_default"/>
 	      <use-document ref="//slothsoft@farah/sites"/>
 	      <link-stylesheet ref="css/layout"/>
+	      <link-stylesheet ref="css/fonts"/>
 	      <use-document ref="api/navi"/>
 	    </fragment>
 	    <fragment name="navi">

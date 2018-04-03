@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:sfs="http://schema.slothsoft.net/farah/sitemap"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:svg="http://www.w3.org/2000/svg"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
- 
-	<xsl:output method="xml" indent="no" encoding="UTF-8" media-type="application/xhtml+xml" version="1.0"/>
+	
 	<xsl:template match="/*">
-		<xsl:variable name="pageTitles" select="request/*"/>
-		<xsl:variable name="pageHeadings" select="*[@name='content']//html:h2[@id]"/>
-		<xsl:variable name="chatNode" select="*[@name='chat']"/>
-		<xsl:variable name="requestedPage" select="request/*[1]"/>
+		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]"/>
+		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
 		<html>
 			<head>
 				<title>
-					<!--<xsl:value-of select="page/@header"/>-->
-					<xsl:for-each select="$pageTitles">
-						<xsl:if test="position() &gt; 1">
-							<xsl:text> - </xsl:text>
-						</xsl:if>
-						<p data-dict="."><xsl:value-of select="@title"/></p>
-					</xsl:for-each>
+					<p data-dict="."><xsl:value-of select="$requestedPage/@title"/></p>
 					<xsl:text> | Daniel Schulz</xsl:text>
 				</title>
-				<link rel="icon" type="image/png" href="/getResource.php/daniel/favicon"/>
+				<link rel="icon" type="image/png" href="/getAsset.php/daniel/static/favicon"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1"/>
 				<meta name="author" content="Daniel Schulz"/>
-				<!--
-				<meta name="keywords">
-					<xsl:attribute name="content">
-						<xsl:for-each select="$pageTitles">
-							<xsl:if test="position() &gt; 1">
-								<xsl:text>,</xsl:text>
-							</xsl:if>
-							<p data-dict="."><xsl:value-of select="@title"/></p>
-						</xsl:for-each>
-					</xsl:attribute>
-				</meta>
-				-->
 			</head>
 			<body>
 				<div class="page">
@@ -55,16 +35,8 @@
 						<xsl:copy-of select="*[@name='navi']/node()"/>
 					</nav>
 					<main>
-						<!--
-						<header>
-							<h2 data-dict="" hidden="hidden">
-								<xsl:value-of select="$pageTitles[1]/@name"/>
-								<xsl:text>/headline</xsl:text>
-							</h2>
-						</header>
-						-->
 						<div data-dict="">
-							<xsl:value-of select="$pageTitles[1]/@name"/>
+							<xsl:value-of select="$requestedPage/@name"/>
 							<xsl:text>/content</xsl:text>
 						</div>
 						<xsl:copy-of select="*[@name='content']/node()"/>
