@@ -4,7 +4,7 @@
     <resource-directory name="xsl" type="application/xslt+xml"/>
     
     <resource-directory name="dictionary" type="application/xml"/>
-    <resource-directory name="sitemap" type="application/xml"/>
+    <resource name="sitemap" type="application/xml"/>
     
     <directory name="static">
       <resource-directory name="images" path="images" type="image/png"/>
