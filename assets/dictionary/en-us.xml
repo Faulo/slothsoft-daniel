@@ -5,6 +5,12 @@
 	<p key="daniel-schulz.slothsoft.net">News</p>
 	<p key="daniel-schulz.slothsoft.net/content">
 		<article>
+			<h2>27.04.2018</h2>
+			<p>
+				Added "Farah" to the list of projects, and met some amazing people at Quo Vadis.
+			</p>
+		</article>
+		<article>
 			<h2>10.12.2017</h2>
 			<p>
 				OK so in the future I'm gonna figure out a cool way to show off code examples of my work, but for now let it be known that 
@@ -578,6 +584,42 @@
 			</figure>
 		</article>
 	</p>
+	
+	<p key="Farah">Content Management System "Farah"</p>
+	<p key="Farah/content">
+		<article>
+			<h2>About</h2>
+			<p>
+				In order to study software architecture, networking interfaces, and programming in general,
+				I've created my own content management system. I've been working on it since ca. 2011, tho have only
+				recently ported the codebase to <a href="https://github.com/Faulo/slothsoft-farah" rel="external">github</a>
+				and <a href="https://packagist.org/packages/slothsoft/farah" rel="external">packagist</a>. 
+				Its homepage is <a href="http://farah.slothsoft.net/" rel="external">http://farah.slothsoft.net/</a>.
+			</p>
+			<p>Some of its features are:</p>
+			<ul>
+				<li>Serving entire websites via a <a href="http://schema.slothsoft.net/farah/sitemap/" rel="external">custom-made sitemap file</a>.</li>
+				<li>Accessing individual files, dynamically generated content, or content streams via a uniform protocol defined in a <a href="http://schema.slothsoft.net/farah/module/" rel="external">custom-made manifest file</a>.</li>
+				<li>Localization via <a href="http://schema.slothsoft.net/farah/dictionary/" rel="external">custom-made dictionary files</a>.</li>
+				<li>A dependency manager for CSS and JavaScript resources.</li>
+				<li>HTTP negotiation support for client language, data compression, ranged requests, and caching.</li>
+				<li>Support of a wide variety of XSLT processors, up to XSLT 3.0.</li>
+				<li>Support for multithreaded content generation.</li>
+				<li>All HTML resources as served as application/xhtml+xml. Death to text/html!</li>
+				<li>Available as composer package "slothsoft/farah".</li>
+			</ul>
+		</article>
+	</p>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<p key="spec/mysql">
 		<a rel="external" target="_blank" href="https://dev.mysql.com/">MySQL</a>
 	</p>
