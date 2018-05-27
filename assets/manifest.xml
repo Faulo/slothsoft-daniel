@@ -14,29 +14,29 @@
     
     <fragment name="pages">
     	<fragment name="default">
-	      <import ref="api/default"/>
+	      <import ref="/api/default"/>
 	    </fragment>
 	    <fragment name="tetris">
-	      <import ref="api/default"/>
+	      <import ref="/api/default"/>
 	      <use-document ref="//slothsoft@tetris/game" as="content"/>
 	    </fragment>
     </fragment>
     
     <fragment name="api">
 	    <fragment name="default">
-	      <use-template ref="xsl/_default"/>
+	      <use-template ref="/xsl/_default"/>
 	      <use-document ref="//slothsoft@farah/sites"/>
-	      <link-stylesheet ref="css/layout"/>
-	      <link-stylesheet ref="css/fonts"/>
-	      <use-document ref="api/navi"/>
+	      <link-stylesheet ref="/css/layout"/>
+	      <link-stylesheet ref="/css/fonts"/>
+	      <use-document ref="/api/navi"/>
 	    </fragment>
 	    <fragment name="navi">
-	      <use-template ref="xsl/navi"/>
+	      <use-template ref="/xsl/navi"/>
 	      <use-document ref="//slothsoft@farah/sites"/>
 	    </fragment>
 	    <fragment name="images">
-	      <use-template ref="xsl/imageList"/>
-	      <use-document ref="static/images"/>
+	      <use-template ref="/xsl/imageList"/>
+	      <use-document ref="/static/images"/>
 	    </fragment>
     </fragment>
   </assets>
